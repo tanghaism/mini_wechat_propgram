@@ -1,0 +1,43 @@
+page {
+  // 页面内容背景颜色
+  --page-bg-color: #f1f1f1;
+  // 白色
+  --white: #ffffff;
+  // 黑色
+  --black: #000000;
+  // 提示性文字颜色
+  --tip-color: #999999;
+  // popup字体颜色
+  --popup-color: #232323;
+  // 边框颜色
+  --border-color: #cccccc;
+  // 蓝色选中
+  --active-blue: #07BEFF;
+  // 红色选中
+  --active-red: #ff5052;
+  // 黄色选中
+  --active-yellow: #ffc849;
+}
+
+@media (prefers-color-scheme: dark) {
+  page {
+    // 页面内容背景颜色
+    --page-bg-color: #181818;
+    // 白色
+    --white: #000000;
+    // 黑色
+    --black: #ffffff;
+    // 提示性文字颜色
+    --tip-color: #666666;
+    // popup字体颜色
+    --popup-color: #cacaca; // #999999
+    // 边框颜色
+    --border-color: #565656; // #999999
+    // 蓝色选中
+    --active-blue: #07BEFF;
+    // 红色选中
+    --active-red: #ff5052;
+    // 黄色选中
+    --active-yellow: #ffc849;
+  }
+}

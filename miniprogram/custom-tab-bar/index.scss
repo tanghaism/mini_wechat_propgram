@@ -1,0 +1,52 @@
+/* custom-tab-bar/index.wxss */
+
+.tab-bar {
+  height: 100rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--white);
+  &-wrap {
+    transition: background .1s linear;
+    pointer-events: auto;
+    box-shadow: 0px 0px 5rpx 1rpx rgba(190,190,190,.1);
+  }
+  &-icon {
+    position: relative;
+    width: 54rpx;
+    height: 54rpx;
+    overflow: visible;
+  }
+  &-red-dot {
+    position: absolute;
+    top: 4rpx;
+    right: 4rpx;
+    display: block;
+    width: 12rpx;
+    height: 12rpx;
+    border-radius: 50%;
+    &-text {
+      width: auto;
+      top: -5rpx;
+      right: 0;
+      padding-left: 4rpx;
+      padding-right: 4rpx;
+      max-width: 50rpx;
+      min-width: 28rpx;
+      height: 28rpx;
+      line-height: 28rpx;
+      font-size: 22rpx;
+      color: #ffffff;
+      text-align: center;
+      border-radius: 28rpx;
+      transform: translateX(50%);
+      box-sizing: border-box;
+    }
+  }
+  &-text {
+    padding: 0 10rpx;
+    font-size: 24rpx;
+    box-sizing: border-box;
+    &.active {
+      color: var(--black);
+    }
+  }
+}

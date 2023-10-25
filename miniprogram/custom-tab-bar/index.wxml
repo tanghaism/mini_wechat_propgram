@@ -1,0 +1,27 @@
+<!--custom-tab-bar/index.wxml-->
+<view class="tab-bar tab-bar-wrap absolute l-0 b-0  w-full flex-box flex-items-stretch flex-justify-around flex-nowrap z-max" style="background: {{tabBar.backgroundColor}}">
+  <view wx:for="{{tabBar.list}}" wx:key="pagePath" data-index="{{index}}" catch:tap="handleToPage" class="flex-1 flex-box flex-items-center flex-justify-center flex-column text-ellipses">
+    <image wx:if="{{item.iconPath && item.selectedIconPath}}" src="{{active === index ? item.selectedIconPath : item.iconPath}}" class="tab-bar-icon relative" webp>
+      <text wx:if="{{item.redDot && !item.redDotText}}" class="tab-bar-red-dot" style="background: {{dotColor}}"></text>
+      <text wx:elif="{{item.redDot && item.redDotText}}" class="tab-bar-red-dot tab-bar-red-dot-text text-ellipses" style="background: {{dotColor}}">{{module.transferText(item.redDotText)}}</text>
+    </image>
+    <text style="color: {{active === index ? tabBar.selectedColor : tabBar.color}}" class="tab-bar-text w-full block text-center text-ellipses">{{item.text}}</text>
+  </view>
+</view>
+
+
+<wxs module="module">
+  /** 如果redDotText是数字，则超过100显示99+，其他情况直接展示 */
+  var transferText = function (str) {
+    if (!isNaN(str)) {
+      if (str * 1 >= 100) {
+        return '99+'
+      }
+    }
+    return str
+  }
+
+  module.exports = {
+    transferText: transferText
+  }
+</wxs>

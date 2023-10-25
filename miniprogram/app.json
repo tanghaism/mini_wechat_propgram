@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/like/index",
+    "pages/hot/index",
+    "pages/message/index",
+    "pages/me/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "@tabColor",
+    "selectedColor": "@tabSelectedColor",
+    "backgroundColor": "@tabBgColor",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/like/index",
+        "text": "喜欢"
+      },
+      {
+        "pagePath": "pages/hot/index",
+        "text": "热门"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我"
+      }
+    ]
+  },
+  "subpackages": [],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "Weixin",
+    "backgroundTextStyle": "@windowBgTextStyle",
+    "navigationBarBackgroundColor": "@tabBgColor",
+    "navigationBarTextStyle": "@navigationBarTextStyle",
+    "backgroundColor": "@windowBgColor",
+    "backgroundColorTop": "@windowBgColor",
+    "backgroundColorBottom": "@windowBgColor",
+    "visualEffectInBackground": "hidden"
+  },
+  "usingComponents": {
+    "van-transition": "@vant/weapp/transition/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "NavigatorBar": "./components/NavigatorBar/index",
+    "Loading": "./components/Loading/index",
+    "Popup": "./components/Popup/index"
+  },
+  "darkmode": true,
+  "themeLocation": "theme.json",
+  "sitemapLocation": "sitemap.json",
+  "requiredPrivateInfos": [],
+  "preloadRule": {},
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "requiredBackgroundModes": [],
+  "lazyCodeLoading": "requiredComponents",
+  "resolveAlias": {
+    "@/*": "/*"
+  }
+}

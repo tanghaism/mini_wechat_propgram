@@ -1,0 +1,160 @@
+/** 字体大小 */
+.font {
+  &-32 {
+    font-size: 32rpx;
+  }
+  &-28 {
+    font-size: 28rpx;
+  }
+  &-24 {
+    font-size: 24rpx;
+  }
+  &-22 {
+    font-size: 22rpx;
+  }
+  &-20 {
+    font-size: 20rpx;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.z {
+  &-1 {
+    z-index: 1;
+  }
+  &-2 {
+    z-index: 2;
+  }
+  &-100 {
+    z-index: 100;
+  }
+  &-max {
+    z-index: 10000;
+  }
+}
+
+.t {
+  &-0 {
+    top: 0;
+  }
+  &-50 {
+    top: 50%;
+  }
+}
+
+.l {
+  &-0{
+    left: 0;
+  }
+  &-50 {
+    left: 50%;
+  }
+}
+
+.b {
+  &-0 {
+    bottom: 0;
+  }
+}
+
+.p {
+  &t {
+    &-2 {
+      padding-top: 2rpx;
+    }
+    &-6 {
+      padding-top: 6rpx;
+    }
+    &-10 {
+      padding-top: 10rpx;
+    }
+    &-20 {
+      padding-top: 20rpx;
+    }
+  }
+}
+
+.block {
+  display: block;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.flex {
+  &-box {
+    display: flex;
+  }
+  &-items {
+    &-center {
+      align-items: center;
+    }
+    &-stretch{
+      align-items: stretch;
+    }
+  }
+  &-justify {
+    &-center {
+      justify-content: center;
+    }
+    &-between {
+      justify-content: space-between;
+    }
+    &-around {
+      justify-content: space-around;
+    }
+  }
+  &-column {
+    flex-direction: column;
+  }
+  &-nowrap {
+    flex-wrap: nowrap;
+  }
+  &-1 {
+    flex: 1;
+  }
+}
+
+.text {
+  &-center {
+    text-align: center;
+  }
+}
+
+.text-ellipses {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.tip-color {
+  color: var(--tip-color);
+}
+
+.reset-button {
+  padding: 0;
+  border: none !important;
+  border-radius: 0;
+  line-height: initial;
+  color: inherit !important;
+}

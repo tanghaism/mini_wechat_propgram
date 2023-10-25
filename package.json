@@ -1,0 +1,23 @@
+{
+  "name": "miniprogram-ts-less-quickstart",
+  "version": "1.0.0",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.11.1",
+    "wxml-to-canvas": "^1.1.1"
+  },
+  "devDependencies": {},
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanghaism/mini_wechat_program.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tanghaism/mini_wechat_program/issues"
+  },
+  "homepage": "https://github.com/tanghaism/mini_wechat_program#readme",
+  "description": ""
+}

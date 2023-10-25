@@ -1,0 +1,22 @@
+<!--components/Loading/index.wxml-->
+<van-transition wx:if="{{!fullScreen}}" show="{{visible}}" duration="{{duration}}">
+    <view class="loadingio-spinner-dual-ball-mye7p8s0b3r">
+        <view class="ldio-sve0a51luu">
+            <view class="loading-ball"></view>
+            <view class="loading-ball"></view>
+            <view class="loading-ball"></view>
+        </view>
+    </view>
+</van-transition>
+
+<van-transition wx:else show="{{visible}}" duration="{{duration}}">
+    <view class="full-loading fixed t-0 l-0 w-full h-full flex-box flex-items-center flex-justify-center z-100">
+        <view class="loadingio-spinner-dual-ball-mye7p8s0b3r">
+            <view class="ldio-sve0a51luu">
+                <view class="loading-ball"></view>
+                <view class="loading-ball"></view>
+                <view class="loading-ball"></view>
+            </view>
+        </view>
+    </view>
+</van-transition>

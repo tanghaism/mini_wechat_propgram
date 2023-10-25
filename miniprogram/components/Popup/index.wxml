@@ -1,0 +1,36 @@
+<!--components/Popup/index.wxml-->
+<van-popup show="{{ show }}"
+           overlay="{{overlay}}"
+           position="{{position}}"
+           duration="{{duration}}"
+           round="{{round}}"
+           custom-style="background: {{popupBackgroundColor}};max-height:80vh;{{customStyle}}"
+           overlay-style="{{overlayStyle}}"
+           close-on-click-overlay="{{closeOnClickOverlay}}"
+           closeable="{{closeable}}"
+           close-icon="{{closeIcon}}"
+           close-icon-position="{{closeIconPosition}}"
+           safe-area-inset-bottom="{{safeAreaInsetBottom}}"
+           safe-area-inset-top="{{safeAreaInsetTop}}"
+           safe-area-tab-bar="{{safeAreaTabBar}}"
+           root-portal="{{rootPortal}}"
+           z-index="{{zIndex}}"
+           lock-scroll="{{lockScroll}}"
+           bind:close="onClose"
+           bind:click-overlay="onClickOverlay"
+           bind:before-enter="onBeforeEnter"
+           bind:enter="onEnter"
+           bind:after-enter="onAfterEnter"
+           bind:leave="onLeave"
+           bind:after-leave="onAfterLeave"
+>
+    <view class="relative w-full h-full flex-box flex-column flex-nowrap">
+        <view class="popup-title flex-box flex-items-center font-26">
+            <text wx:if="{{title}}">{{title}}</text>
+            <slot name="title"></slot>
+        </view>
+        <view class="popup-content flex-1">
+            <slot></slot>
+        </view>
+    </view>
+</van-popup>

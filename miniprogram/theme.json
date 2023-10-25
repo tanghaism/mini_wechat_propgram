@@ -1,0 +1,19 @@
+{
+  "desc": "关于本文件的更多信息，请参考文档 https://developers.weixin.qq.com/miniprogram/dev/framework/ability/darkmode.html",
+  "light": {
+    "tabColor": "#999999",
+    "tabSelectedColor": "#000000",
+    "tabBgColor": "#ffffff",
+    "windowBgTextStyle": "light",
+    "navigationBarTextStyle": "black",
+    "windowBgColor": "#f8f8f8"
+  },
+  "dark": {
+    "tabColor": "#eeeeee",
+    "tabSelectedColor": "#ffffff",
+    "tabBgColor": "#000000",
+    "windowBgTextStyle": "dark",
+    "navigationBarTextStyle": "white",
+    "windowBgColor": "#181818"
+  }
+}

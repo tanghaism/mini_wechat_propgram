@@ -1,0 +1,20 @@
+/* components/NavigatorBar/index.wxss */
+
+.navigator-bar {
+  line-height: 1;
+  box-sizing: border-box;
+  transition: all .1s linear;
+  background-color: var(--white);
+  &-border {
+    border-bottom: 1px solid #e8e8e8;
+  }
+  &-title {
+    font-family: 'Microsoft Yahei' sans-serif;
+    font-weight: bold;
+    color: var(--black);
+  }
+}
+
+.icon-back {
+  font-weight: 200;
+}

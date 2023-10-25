@@ -1,0 +1,27 @@
+/**app.wxss**/
+@import "./assets/scss/var";
+@import "./assets/scss/unit";
+
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 100rpx);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-size: 28rpx;
+  background-color: var(--page-bg-color) !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/** 页面内容公共class */
+.page-content {
+  position: relative;
+  flex: 1;
+}

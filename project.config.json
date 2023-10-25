@@ -7,22 +7,37 @@
     "include": []
   },
   "setting": {
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./miniprogram/"
+      }
+    ],
+    "useCompilerPlugins": [
+      "sass"
+    ],
     "coverView": true,
     "es6": true,
     "postcss": true,
     "minified": true,
     "enhance": true,
     "showShadowRootInWxmlPanel": true,
-    "packNpmRelationList": [],
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "ignoreUploadUnusedFiles": true,
+    "ignoreDevUnusedFiles": true
   },
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "srcMiniprogramRoot": "miniprogram/",
+  "miniprogramRoot": "miniprogram/"
 }

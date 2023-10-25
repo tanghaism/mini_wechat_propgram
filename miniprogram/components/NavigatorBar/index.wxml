@@ -1,0 +1,16 @@
+<view hidden="{{!visible}}" style="width: 100vw; height: {{statusBarHeight + height}}px">
+    <view class="navigator-bar {{showBorder ? 'navigator-bar-border ' : ''}}fixed l-0 t-0 w-full h-full flex-box flex-items-center flex-nowrap text-ellipses z-max" style="padding-top: {{statusBarHeight}}px; height: {{statusBarHeight + height}}px; background: {{background}}">
+        <view wx:if="{{showLeftBox}}" class="relative flex-box flex-items-center" style="width: {{btnWidth}}px; padding: 0px {{btnPaddingX}}px; height: {{height}}px">
+            <view wx:if="{{showBack}}" class="navigator-back absolute l-0 t-0 h-full flex-box flex-items-center flex-justify-center" style="width: {{height}}px" catch:tap="handleClickBack">
+                <van-icon wx:if="{{isAppLaunchPage !== -1}}" name="{{isAppLaunchPage === 1 ? 'arrow-left' : 'wap-home-o'}}" custom-class="icon-back" size="40rpx"/>
+            </view>
+            <slot wx:else name="left"></slot>
+        </view>
+        <view class="flex-box flex-items-center flex-nowrap flex-1 text-ellipses">
+            <text wx:if="{{title}}" class="navigator-bar-title block w-full text-center text-ellipses font-32">{{title}}</text>
+            <slot wx:else name="title"></slot>
+        </view>
+        <view style="width: {{btnWidth}}px"></view>
+    </view>
+</view>
+
