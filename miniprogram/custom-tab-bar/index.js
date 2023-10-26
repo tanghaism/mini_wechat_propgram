@@ -17,7 +17,6 @@ Component(app.proxy.connect({
     /** tabbar配置 */
     config: {
       type: Object,
-      value: TAB_BAR,
       observer(){
         const { theme = 'light' } = app.globalData;
         this.handleSetTheme(theme)
@@ -51,11 +50,6 @@ Component(app.proxy.connect({
     tabBar: {
       ...TAB_BAR[theme]
     }
-  },
-
-  attached(){
-    const { theme = 'light' } = app.globalData;
-    this.handleSetTheme(theme)
   },
 
   ready(){
