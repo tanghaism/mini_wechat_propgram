@@ -1,7 +1,9 @@
 // components/NavigatorBar/index.ts
+import { TAB_BAR } from '@/constants/tabbar'
+
 const app = getApp();
 /** 获取屏幕样式 */
-const { navigatorStyle, windowStyle, theme: globalTheme = 'light' } = app.globalData;
+const { navigatorStyle, windowStyle } = app.globalData;
 
 Component(app.proxy.connect({
   /**
@@ -64,15 +66,18 @@ Component(app.proxy.connect({
 
   pageLifetimes: {
     show() {
+      const {theme = 'light'} = app.globalData;
       /** 判断当前页面是否可以返回 */
       const routes = getCurrentPages();
       let isAppLaunchPage = routes.length > 1 ? 1 : 0;
       /** 如果当前页面没有上一页，且当前页面就是小程序默认首页，则重置为尚未初始化，不显示返回按钮 */
-      if(isAppLaunchPage === 0 && routes[0].route === app.globalData.entryPagePath){
+      if(this.properties.showBack && isAppLaunchPage === 0 && TAB_BAR[theme].list.some(item => item.pagePath === routes[routes.length - 1].route)){
         isAppLaunchPage = -1
       }
       if(isAppLaunchPage !== this.data.isAppLaunchPage){
-        data.isAppLaunchPage = isAppLaunchPage
+        this.setData({
+          isAppLaunchPage
+        })
       }
     }
   },

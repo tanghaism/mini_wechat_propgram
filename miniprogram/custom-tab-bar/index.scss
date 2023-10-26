@@ -4,6 +4,7 @@
   height: 100rpx;
   padding-bottom: env(safe-area-inset-bottom);
   background: var(--white);
+  z-index: 99999;
   &-wrap {
     transition: background .1s linear;
     pointer-events: auto;

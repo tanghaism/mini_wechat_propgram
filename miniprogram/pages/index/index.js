@@ -1,12 +1,18 @@
+const app = getApp();
+
+
 Page({
   data: {
-    showLoading: true
+    theme: app.globalData.theme
   },
   onLoad: function (options) {
-    setTimeout(() => {
+    
+  },
+  watch:{
+    theme(newVal){
       this.setData({
-        showLoading: false
+        theme: newVal
       })
-    }, 20000)
+    }
   }
 });

@@ -1,0 +1,6 @@
+<!--components/Poster/index.wxml-->
+
+<!-- 海报预览图 -->
+<slot></slot>
+
+<wxml-to-canvas wx:if="{{renderCanvas}}" width="{{width}}" height="{{height}}" class="wxml-to-canvas" />

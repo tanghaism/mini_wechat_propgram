@@ -1,0 +1,7 @@
+/* components/Poster/index.wxss */
+.wxml-to-canvas {
+  position: fixed;
+  left: -10000rpx;
+  top: 0;
+  z-index: -100;
+}

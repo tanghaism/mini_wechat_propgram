@@ -1,8 +1,6 @@
 <!-- 页面顶部 -->
-<NavigatorBar title="推荐"></NavigatorBar>
+<NavigatorBar title="推荐" showBack="{{false}}"></NavigatorBar>
 <!-- 页面正文 -->
 <view class="page-content">
-    index.wxml
+    {{theme}}
 </view>
-
-<Loading wx:if="{{showLoading}}" />
