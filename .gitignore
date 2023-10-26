@@ -132,3 +132,5 @@ dist
 .idea
 
 miniprogram/miniprogram_npm/*
+
+.DS_Store
