@@ -2,7 +2,7 @@
 /** production代表客户生产小程序 */
 export const envMap = {
   'wx00fe18a34c9967ad': 'production',
-  '12321312': 'test',
+  'wxb8c3244bb369896f': 'test',
 }
 
 /** 开发环境/生产环境域名配置 */
