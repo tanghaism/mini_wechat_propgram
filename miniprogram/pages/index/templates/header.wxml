@@ -1,0 +1,12 @@
+<!-- 页面顶部 -->
+<template name="header">
+    <NavigatorBar showBack="{{false}}" background="{{isScrollToMaxNumber ? '' : 'transparent'}}">
+      <view class="relative w-full h-full header-logo" slot="left">
+      </view>
+      <view class="header-search w-full px-16 py-10 flex-box flex-items-center border-box text-ellipses {{isScrollToMaxNumber ? 'fill-color' : ''}}" slot="title">
+        <van-icon name="search" custom-class="icon-search" size="40rpx" />
+        <text class="font-28 text-ellipses flex-1">输入商品链接/标题即可全网比价</text>
+      </view>
+    </NavigatorBar>
+</template>
+

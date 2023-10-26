@@ -1,6 +1,10 @@
+<import src="./templates/header.wxml" />
+<import src="./templates/swiper.wxml" />
+
 <!-- 页面顶部 -->
-<NavigatorBar title="推荐" showBack="{{false}}"></NavigatorBar>
+<template is="header" data="{{isScrollToMaxNumber}}" />
 <!-- 页面正文 -->
 <view class="page-content">
-    {{theme}}
+    <template is="swiper" data="{{swiper}}" />
+    <view style="height: 2004rpx;"></view>
 </view>

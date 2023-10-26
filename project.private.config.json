@@ -4,5 +4,19 @@
   "setting": {
     "compileHotReLoad": false,
     "urlCheck": false
-  }
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/hot/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "libVersion": "2.32.2"
 }

@@ -69,6 +69,18 @@
 }
 
 .p {
+  &x {
+    &-16 {
+      padding-left: 16rpx;
+      padding-right: 16rpx;
+    }
+  }
+  &y {
+    &-10 {
+      padding-top: 10rpx;
+      padding-bottom: 10rpx;
+    }
+  }
   &t {
     &-2 {
       padding-top: 2rpx;

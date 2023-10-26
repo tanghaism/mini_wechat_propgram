@@ -5,11 +5,14 @@ export class AppProxy {
   }
 
   connect(pageOrComponentObj = {}) {
-    const { watch, onShareAppMessage, onLoad, created, detached, onUnload } = pageOrComponentObj;
+    const { watch, onShareAppMessage, onShareTimeline, onLoad, created, detached, onUnload } = pageOrComponentObj;
     const _this = this;
 
     if(onShareAppMessage){
       this._sendShareAppMessage(pageOrComponentObj)
+    }
+    if(onShareTimeline){
+      this._sendShareTimeline(pageOrComponentObj)
     }
     if(typeof watch === 'object'){
       pageOrComponentObj.onLoad = function(options){
@@ -80,6 +83,17 @@ export class AppProxy {
     pageOrComponentObj.onShareAppMessage = async function(shareEvent){
       const shareObject = await onShareAppMessage.call(this, shareEvent);
       console.log(this, shareEvent);
+      return shareObject;
+    }
+    return pageOrComponentObj
+  }
+
+  // 代理页面内的朋友圈分享卡片钩子，在这里统一处理逻辑
+  _sendShareTimeline(pageOrComponentObj = {}) {
+    const {onShareTimeline} = pageOrComponentObj;
+    pageOrComponentObj.onShareTimeline = async function(){
+      const shareObject = await onShareTimeline.call(this);
+      console.log(this);
       return shareObject;
     }
     return pageOrComponentObj

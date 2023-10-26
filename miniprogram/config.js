@@ -45,11 +45,6 @@ export const hostMap = {
   }
 }
 
-__wxConfig.auth = wx.getStorageSync('auth') || {
-  token: '',
-  expires: 0,
-}
-
 const { accountInfo, envVersion, platform, entryPagePath, tabBar } = __wxConfig;
 const { appId, nickname, icon } = accountInfo;
 const env = envMap[appId];

@@ -1,0 +1,22 @@
+.header-logo{
+    background: var(--logo) no-repeat center;
+    background-size: 50rpx 50rpx;
+}
+
+.header-search {
+  background-color: var(--white);
+  color: var(--border-color);
+  border: 1rpx solid var(--border-color);
+  border-radius: 40rpx;
+
+  &.fill-color {
+    color: var(--tip-color);
+    .icon-search {
+      color: var(--tip-color);
+    }
+  }
+}
+
+.icon-search {
+  color: var(--border-color);
+}
