@@ -1,0 +1,29 @@
+<!--components/GoodsList/index.wxml-->
+<view class="section shadow-none goods-list">
+  <grid-view type="masonry" cross-axis-count="2" main-axis-gap="5" cross-axis-gap="5">
+    <view class="relative goods-item" wx:for="{{list}}" wx:key="id" data-item="{{item}}" catch:tap="handleClickGoodsItem">
+      <Image class="goods-preview" src="{{item.img}}" lazy-load webp mode="widthFix"></Image>
+      <view class="px-10 py-10">
+        <view class="w-full text-ellipses text-ellipses-multi">{{item.title}}</view>
+        <view class="flex-box flex-items-center font-26 font-weight-400 pt-6">
+            <text class="flex-1 tip-color goods-origin-price">¥{{item.originPrice}}</text>
+            <text class="goods-coupon-item border-radius px-16 text-ellipses">优惠券 ¥{{item.coupon}}</text>
+        </view>
+        <view class="flex-box flex-items-center pt-6">
+            <text class="tip-color font-26 font-weight-500">券后价 <text class="font-32 goods-price">¥{{item.price}}</text></text>
+        </view>
+        <view class="flex-box flex-items-center pt-6">
+          <text class="flex-1 font-24 tip-color">月销{{item.sales}}件</text>
+          <button class="reset-button goods-buy-btn font-28" data-item="{{item}}" catch:tap="handleToThirdApp">领券购买</button>
+        </view>
+      </view>
+    </view>
+  </grid-view>
+  <view hidden="{{!(isPage && finished && list.length === 0)}}" class="flex-box flex-column flex-justify-center flex-items-center is-empty">
+    <van-icon custom-class="icon-empty" name="smile" size="120rpx" />
+    <text class="tip-color pt-20 font-24">未查询到商品</text>
+  </view>
+  <view hidden="{{isPage}}" class="flex-box flex-column flex-justify-center flex-items-center">
+    <text class="tip-color font-24 py-10">{{loading ? '加载中...' : (finished ? '暂无更多数据' : '数据异常，请稍后再试')}}</text>
+  </view>
+</view>

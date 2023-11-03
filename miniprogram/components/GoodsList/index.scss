@@ -1,0 +1,43 @@
+/* components/GoodsList/index.wxss */
+
+.goods-item {
+  max-width: 50%;
+  border-radius: 20rpx;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.goods-preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.goods-origin-price {
+  text-decoration: line-through;
+}
+
+.goods-price {
+  color: var(--active-red);
+}
+
+.goods-coupon-item {
+  background: var(--active-orange);
+  color: #ffffff;
+}
+
+.goods-buy-btn.reset-button{
+  border-radius: 6rpx !important;
+  color: #ffffff !important;
+  padding: 8rpx 20rpx;
+  background-color: var(--active-green);
+}
+
+.is-empty {
+  height: 70vh;
+}
+
+.icon-empty {
+  margin-top: 200rpx;
+  color: var(--tip-color);
+}
