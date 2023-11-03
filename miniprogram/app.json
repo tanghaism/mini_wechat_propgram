@@ -50,9 +50,11 @@
     "van-transition": "@vant/weapp/transition/index",
     "van-overlay": "@vant/weapp/overlay/index",
     "van-icon": "@vant/weapp/icon/index",
+    "Image": "./components/Image/index",
     "NavigatorBar": "./components/NavigatorBar/index",
     "Loading": "./components/Loading/index",
-    "Popup": "./components/Popup/index"
+    "Popup": "./components/Popup/index",
+    "GoodsList": "./components/GoodsList/index"
   },
   "darkmode": true,
   "themeLocation": "theme.json",

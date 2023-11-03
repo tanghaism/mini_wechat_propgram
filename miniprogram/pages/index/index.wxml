@@ -1,10 +1,24 @@
 <import src="./templates/header.wxml" />
 <import src="./templates/swiper.wxml" />
+<import src="./templates/diamond.wxml" />
+<import src="./templates/operation.wxml" />
+<import src="/behaviors/clickFeedback.behavior.wxml" />
+
+<Loading visible="{{loading}}" />
 
 <!-- 页面顶部 -->
 <template is="header" data="{{isScrollToMaxNumber}}" />
 <!-- 页面正文 -->
 <view class="page-content">
+    <!--  顶部轮播图  -->
     <template is="swiper" data="{{swiper}}" />
-    <view style="height: 2004rpx;"></view>
+    <!--  顶部金刚区  -->
+    <template is="diamond" data="{{diamond}}" />
+    <!--  顶部运营位  -->
+    <template is="operation" data="{{operation}}" />
+    <!--  商品列表  -->
+    <GoodsList isPage="{{false}}" list="{{goodsList}}"/>
+
+    <!--  点击触发popup  -->
+    <template is="clickFeedbackPopup" data="{{clickFeedbackPopup}}"/>
 </view>

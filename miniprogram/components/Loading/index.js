@@ -19,7 +19,7 @@ Component({
     duration: {
       type: Object,
       optionalTypes: [Number, Object],
-      value: {enter: 20, leave: 200},
+      value: {enter: 0, leave: 500},
     },
     /** 是否盖住全屏 */
     fullScreen: {

@@ -1,0 +1,21 @@
+<!-- 页面顶部运营位 -->
+<!--
+type: 1 - 上A下BB
+type: 2 - 左A右BB
+type: 3 - 右A左BB
+type: 4 - 下A上BB
+type: 5 - A
+type: 6 - BB
+-->
+<template name="operation">
+    <view class="section shadow-none operation {{operation.type === 3 ? 'operation-row-reverse' : (operation.type === 4 ? 'operation-column-reverse' : '')}} {{operation.type === 2 || operation.type === 3 || operation.type === 4 || operation.type === 6 ? 'flex-box' : ''}} {{operation.type === 2 || operation.type === 3 ? 'flex-justify-between' : ''}}">
+        <!-- A -->
+        <Image wx:if="{{operation.type !== 6 && operation.a.img}}" class="operation-A operation-A-type-{{operation.type}} border-radius" src="{{operation.a.img}}" lazy-load webp />
+        <!-- BB -->
+        <view wx:if="{{operation.type !== 5 && operation.b}}" class="operation-BB operation-BB-type-{{operation.type}} {{operation.type !== 2 && operation.type !== 3 ? 'flex-box flex-justify-between' : ''}}">
+            <Image class="operation-BB-img border-radius" src="{{operation.b[0].img}}" lazy-load webp />
+            <Image class="operation-BB-img border-radius" src="{{operation.b[1].img}}" lazy-load webp />
+        </view>
+    </view>
+</template>
+

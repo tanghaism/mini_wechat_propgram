@@ -1,0 +1,10 @@
+<!-- 页面顶部金刚位 -->
+<template name="diamond">
+    <view hidden="{{!diamond.length}}" class="section diamond flex-box flex-items-center flex-wrap">
+        <view wx:for="{{diamond}}" wx:key="index" class="diamond-item px-10 py-10 flex-box flex-column flex-items-center flex-justify-center text-ellipses border-box">
+            <Image class="diamond-icon" src="{{item.img}}" lazy-load webp round="{{true}}" mode="aspectFill" />
+            <view class="w-full font-24 pt-2 tip-color text-center text-ellipses">{{item.name}}</view>
+        </view>
+    </view>
+</template>
+

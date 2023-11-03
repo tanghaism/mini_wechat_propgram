@@ -1,0 +1,15 @@
+.diamond {
+  margin-top: -140rpx;
+  border-radius: 40rpx;
+  padding: 24rpx;
+  background-color: var(--white);
+
+  &-item {
+    width: 25%;
+  }
+
+  &-icon {
+    width: 90rpx;
+    height: 90rpx;
+  }
+}

@@ -11,12 +11,22 @@ page {
   --popup-color: #232323;
   // 边框颜色
   --border-color: #e1e1e1;
+  // 边框渐变色
+  --border-linear-color: rgba(0,0,0,.1);
+  // 图片加载背景色
+  --image-background-color: #f7f8fa;
+  // 图片加载icon颜色
+  --image-icon-color: #dcdee0;
   // 蓝色选中
   --active-blue: #07BEFF;
   // 红色选中
   --active-red: #ff5052;
   // 黄色选中
   --active-yellow: #ffc849;
+  // 橙色选中
+  --active-orange: rgb(255, 85, 0);
+  // 绿色选中
+  --active-green: #07c160;
   // logo
   --logo: url('https://cdn.zierwa.com/test/cookbook.png')
 }
@@ -35,12 +45,22 @@ page {
     --popup-color: #cacaca; // #999999
     // 边框颜色
     --border-color: #565656; // #999999
+    // 边框渐变色
+    --border-linear-color: rgba(0,0,0,.9);
+    // 图片加载背景色
+    --image-background-color: #080705;
+    // 图片加载icon颜色
+    --image-icon-color: #23211f;
     // 蓝色选中
     --active-blue: #07BEFF;
     // 红色选中
     --active-red: #ff5052;
+    // 橙色选中
+    --active-orange: rgb(255, 55, 10);
     // 黄色选中
     --active-yellow: #ffc849;
+    // 绿色选中
+    --active-green: #07c160;
     // logo
     --logo: url('https://cdn.zierwa.com/test/cookbook.png')
   }

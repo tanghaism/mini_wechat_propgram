@@ -1,9 +1,9 @@
-<!-- 页面顶部banner -->
+<!-- 页面顶部轮播图 -->
 <template name="swiper">
-  <view class="swiper-container relative w-full flex-box flex-items-center flex-justify-center" style="background-image: linear-gradient(to bottom, {{swiper.list[swiper.current].bg}}, var(--page-bg-color) 90%);background-color: {{swiper.list[swiper.current].bg}}">
+  <view :hidden="{{!swiper.list}}" class="swiper-container relative w-full flex-box flex-items-center flex-justify-center" style="background-image: linear-gradient(to bottom, {{swiper.list[swiper.current].bg}} 50%, var(--page-bg-color));background-color: {{swiper.list[swiper.current].bg}}">
     <swiper current="{{swiper.current}}" bindanimationfinish="handleSwiperChange" class="swiper" autoplay circular previous-margin="75rpx" next-margin="55rpx">
       <swiper-item wx:for="{{swiper.list}}" wx:key="index">
-        <image class="swiper-img" src="{{item.img}}" mode="aspectFill"/>
+        <Image class="swiper-img" src="{{item.img}}" lazy-load webp mode="aspectFill" />
       </swiper-item>
     </swiper>
   </view>
