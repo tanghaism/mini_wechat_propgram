@@ -20,3 +20,13 @@ export const parseString = (str) => {
     return str;
   }
 }
+
+/** 动态变量替换 */
+export const transferVar = (source = {}, str = '', transferFunc) => {
+  return str.replace(/\{\{(.*?)\}\}/g, (regText, text) => {
+    if(text && text.trim()){
+      return typeof transferFunc === 'function' ? transferFunc(source[text]) : source[text]
+    }
+    return regText
+  })
+}

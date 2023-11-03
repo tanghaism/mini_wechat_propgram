@@ -1,0 +1,9 @@
+<!-- 页面顶部金刚位 -->
+<template name="clickFeedbackPopup">
+    <Popup show="{{clickFeedbackPopup.visible}}" title="{{clickFeedbackPopup.title}}" bind:close="handleClickFeedbackPopupClose">
+        <rich-text wx:if="{{clickFeedbackPopup.contentType === 0}}" nodes="{{clickFeedbackPopup.content}}"/>
+        <text wx:elif="{{clickFeedbackPopup.contentType === 1}}">{{clickFeedbackPopup.content}}</text>
+        <image wx:elif="{{clickFeedbackPopup.contentType === 2}}" webp mode="widthFix" show-menu-by-longpress src="{{clickFeedbackPopup.content}}" style="width: 100%"></image>
+    </Popup>
+</template>
+
